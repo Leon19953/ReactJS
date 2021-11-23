@@ -1,29 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import { Message } from './Message';
-
-const name = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam ipsam accusamus facilis rerum similique nihil tempore.";
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 const App = () => {
+  const [messageList, setMessageList] = useState([]);
+  const [text, setText] = useState("");
+
+  const onChangeText = (event) => {
+    setText(event.target.value);
+  };
+
+  const addMessage = (message) => {
+    setMessageList([...messageList, message]);
+  };
+
+  const sendMessage = () => {
+    addMessage({ text: text, author: "Me" });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Message name={name} />
-      </header>
+    <div className="container form">
+      {messageList.map((item, index) => (
+        <div key={`${item.id}-${index}`}>{item.text}</div>
+      ))}
+      <form action="">
+        <input value={text} onchange={onChangeText} />
+        <button onClick={sendMessage}>Отправить!</button>
+      </form>
     </div>
   );
-}
+};
 
 export default App;
