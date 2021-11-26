@@ -1,0 +1,23 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.chat_block {
+  height: 500px;
+  width: 500px;
+}
+
+.message_list_block {
+  border: 1px solid grey;
+  background-color: grey;
+}
+
+.message_list {
+  list-style-type: none;
+}
