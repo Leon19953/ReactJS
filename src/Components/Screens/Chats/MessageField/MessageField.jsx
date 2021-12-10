@@ -9,26 +9,6 @@ export function MessageField({ chatId }) {
   const messages = useSelector(messageListSelector);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const AUTHOR = "BOT";
-    const message = faker.lorem.sentence();
-
-    if (!messages[chatId]) return;
-
-    if (
-      messages[chatId].length &&
-      messages[chatId][messages[chatId].length - 1].author !== "BOT"
-    ) {
-      let timer;
-      timer = setTimeout(() => {
-        dispatch(addMessageAction({ chatId, message, AUTHOR }));
-      }, 1300);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [undefined, messages]);
-
   return (
     <div className="message-field">
       {messages[chatId]?.map((message) => (

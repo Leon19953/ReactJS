@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 
 import { useDispatch } from "react-redux";
-import { addMessageAction } from "../../../Store/Messages/action";
+import { addMessageWithThunk } from "../../../Store/Messages/action";
 
 export function Form({ chatId }) {
   const [message, setMessage] = useState("");
@@ -21,7 +21,7 @@ export function Form({ chatId }) {
   const addMessage = (e) => {
     e.preventDefault();
 
-    dispatch(addMessageAction({ chatId, message, AUTHOR }));
+    dispatch(addMessageWithThunk({ chatId, message, AUTHOR }));
     setMessage("");
   };
 
