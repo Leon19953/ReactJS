@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage";
 
 import thunk from "redux-thunk";
 import { middleware } from "../Middlewares";
+import { catReducer } from "./Cat/reducer";
 import { chatsReducer } from "./Chats/reducer";
 import { messagesReducer } from "./Messages/reducer";
 import { profileReducer } from "./Profile/reducer";
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   chats: chatsReducer,
   messages: messagesReducer,
   profile: profileReducer,
+  cat: catReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
