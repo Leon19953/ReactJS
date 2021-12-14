@@ -10,7 +10,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 
-import { addChatAction } from "../../../Store/Chats/actions";
+import { addChatAction } from "../../../Store/Chats/action";
 
 export function AddChat({ chatId }) {
   const [visible, setVisible] = useState(false);
