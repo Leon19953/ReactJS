@@ -14,6 +14,8 @@ import { Home } from "./Components/Screens/Home";
 import { Profile } from "./Components/Screens/Profile";
 import { Chats } from "./Components/Screens/Chats";
 import { Cats } from "./Components/Screens/Cats";
+import { SignIn } from "./Components/Screens/SignIn";
+import { SignUp } from "./Components/Screens/SignUp";
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
               <Route exact path={ROUTES.CHATS} render={() => <Chats />} />
               <Route exact path={ROUTES.CHAT} render={() => <Chats />} />
               <Route exact path={ROUTES.CATS} render={() => <Cats />} />
+              <Route exact path={ROUTES.SIGN_IN} render={() => <SignIn />} />
+              <Route exact path={ROUTES.SIGN_UP} render={() => <SignUp />} />
+
               <Route
                 path={ROUTES.NO_CHAT}
                 render={() => <h1>Такого чата не существует</h1>}

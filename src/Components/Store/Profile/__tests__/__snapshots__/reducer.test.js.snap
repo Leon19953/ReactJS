@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test profile reducer if toggleCheckboxAction 1`] = `
+Object {
+  "checked": true,
+  "name": "Alexey",
+}
+`;

@@ -6,4 +6,6 @@ export const ROUTES = {
   CATS: "/cats",
   NO_CHAT: "/no-chat",
   NOT_FOUND: "/not-found",
+  SIGN_IN: "/sign-in",
+  SIGN_UP: "/sign-up",
 };
