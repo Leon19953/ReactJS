@@ -93,6 +93,24 @@ export function Menu() {
             style={{ padding: "12px 16px" }}
             {...a11yProps(1)}
           />
+          <Tab
+            label={
+              <Link to="/sign-in" className="reactRouterLink">
+                Sign-In
+              </Link>
+            }
+            style={{ padding: "12px 16px" }}
+            {...a11yProps(1)}
+          />
+          <Tab
+            label={
+              <Link to="/sign-up" className="reactRouterLink">
+                Sign-Up
+              </Link>
+            }
+            style={{ padding: "12px 16px" }}
+            {...a11yProps(1)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}></TabPanel>
